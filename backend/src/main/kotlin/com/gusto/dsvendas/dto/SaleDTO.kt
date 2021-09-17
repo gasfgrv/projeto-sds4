@@ -5,12 +5,12 @@ import com.gusto.dsvendas.entities.Seller
 import java.time.LocalDate
 
 class SaleDTO(
-    private val id: Long,
-    private val visited: Int,
-    private val deals: Int,
-    private val amount: Double,
-    private val date: LocalDate,
-    private val seller: SellerDTO
+    val id: Long,
+    val visited: Int,
+    val deals: Int,
+    val amount: Double,
+    val date: LocalDate,
+    val seller: SellerDTO
 ) {
     constructor(sale: Sale) : this(
         sale.id,
