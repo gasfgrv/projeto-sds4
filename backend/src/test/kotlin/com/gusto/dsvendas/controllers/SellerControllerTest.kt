@@ -2,48 +2,39 @@ package com.gusto.dsvendas.controllers
 
 import com.gusto.dsvendas.dto.SellerDTO
 import com.gusto.dsvendas.services.SellerService
+import org.hamcrest.Matchers.`is`
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
-import org.mockito.BDDMockito.given
-import org.mockito.Mock
-import org.mockito.Mockito
-import org.mockito.junit.jupiter.MockitoExtension
+import org.mockito.Mockito.`when`
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc
-import org.springframework.boot.test.context.SpringBootTest
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest
 import org.springframework.boot.test.mock.mockito.MockBean
-import org.springframework.http.MediaType
-import org.springframework.test.context.ActiveProfiles
+import org.springframework.http.MediaType.APPLICATION_JSON
+import org.springframework.test.context.junit.jupiter.SpringExtension
 import org.springframework.test.web.servlet.MockMvc
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get
-import org.springframework.test.web.servlet.result.MockMvcResultMatchers.content
-import org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath
-import org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
+import org.springframework.test.web.servlet.result.MockMvcResultMatchers.*
 
 
-@SpringBootTest
-@AutoConfigureMockMvc
-@ActiveProfiles("test")
-@ExtendWith(MockitoExtension::class)
+@ExtendWith(SpringExtension::class)
+@WebMvcTest(SellerController::class)
 internal class SellerControllerTest {
 
     @Autowired
     private lateinit var mockMvc: MockMvc
 
+    @MockBean
+    private lateinit var sellerService: SellerService
+
     @Test
     @Throws(Exception::class)
     fun `Deve retornar 200 quando todos os vendedores estiverem cadastrados`() {
+        val seller = SellerDTO(1, "Logan")
+        `when`(sellerService.findAll()).thenReturn(listOf(seller))
 
-        val sellerService: SellerService = Mockito.mock(SellerService::class.java)
-        Mockito.`when`(sellerService.findAll()).thenReturn(listOf(SellerDTO(1, "Logan")))
-
-        println(mockMvc.perform(get("/sellers"))
+        mockMvc.perform(get("/sellers"))
             .andExpect(status().isOk)
-            .andExpect(content().contentType(MediaType.APPLICATION_JSON))
-//            .andExpect(jsonPath("$[0].name").value("Logan"))
-            .andReturn().response.contentAsString
-        )
-
-
+            .andExpect(content().contentType(APPLICATION_JSON))
+            .andExpect(jsonPath("$[0].name", `is`("Logan")))
     }
 }
