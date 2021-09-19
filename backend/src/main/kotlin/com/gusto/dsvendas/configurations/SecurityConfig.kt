@@ -13,10 +13,11 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource
 
 @Configuration
 @EnableWebSecurity
-class SecurityConfig @Autowired constructor(private val env: Environment): WebSecurityConfigurerAdapter() {
+class SecurityConfig @Autowired constructor(private val env: Environment) : WebSecurityConfigurerAdapter() {
 
     override fun configure(http: HttpSecurity) {
         val isTestProfileActive = listOf(env.activeProfiles.contains("test")).first()
+
         if (isTestProfileActive) http.headers().frameOptions().disable()
 
         http.cors().and().csrf().disable()
@@ -27,8 +28,10 @@ class SecurityConfig @Autowired constructor(private val env: Environment): WebSe
     fun corsConfigurationSource(): CorsConfigurationSource {
         val cors = CorsConfiguration().applyPermitDefaultValues()
         cors.allowedMethods = listOf("POST", "GET", "PUT", "DELETE", "OPTIONS")
+
         val url = UrlBasedCorsConfigurationSource()
         url.registerCorsConfiguration("/**", cors)
+
         return url
     }
 }

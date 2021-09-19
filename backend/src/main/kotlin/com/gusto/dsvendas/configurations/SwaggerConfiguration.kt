@@ -6,7 +6,7 @@ import springfox.documentation.builders.ApiInfoBuilder
 import springfox.documentation.builders.PathSelectors
 import springfox.documentation.builders.RequestHandlerSelectors
 import springfox.documentation.service.ApiInfo
-import springfox.documentation.spi.DocumentationType
+import springfox.documentation.spi.DocumentationType.SWAGGER_2
 import springfox.documentation.spring.web.plugins.Docket
 import springfox.documentation.swagger2.annotations.EnableSwagger2
 
@@ -15,13 +15,12 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2
 class SwaggerConfiguration {
 
     @Bean
-    fun swaggerConfig(): Docket = Docket(DocumentationType.SWAGGER_2)
+    fun swaggerConfig(): Docket = Docket(SWAGGER_2)
         .apiInfo(metadata())
         .select()
         .apis(RequestHandlerSelectors.any())
         .paths(PathSelectors.any())
         .build()
-
 
     private fun metadata(): ApiInfo = ApiInfoBuilder()
         .title("DSVendas backend")
