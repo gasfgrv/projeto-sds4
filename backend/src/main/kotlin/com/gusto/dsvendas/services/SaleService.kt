@@ -19,10 +19,9 @@ class SaleService @Autowired constructor(
 ) {
 
     @Transactional(readOnly = true)
-    fun findAll(page: Pageable): Page<SaleDTO?> {
+    fun findAll(page: Pageable): Page<SaleDTO> {
         sellerRepository.findAll()
-        return saleRepository.findAll(page)
-            .map { sale: Sale -> SaleDTO(sale) }
+        return saleRepository.findAll(page).map { sale: Sale -> SaleDTO(sale) }
     }
 
     @Transactional(readOnly = true)
