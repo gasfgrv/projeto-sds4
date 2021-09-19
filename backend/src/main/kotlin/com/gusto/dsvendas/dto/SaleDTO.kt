@@ -1,7 +1,6 @@
 package com.gusto.dsvendas.dto
 
 import com.gusto.dsvendas.entities.Sale
-import com.gusto.dsvendas.entities.Seller
 import java.time.LocalDate
 
 class SaleDTO(
