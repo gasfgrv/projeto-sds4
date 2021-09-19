@@ -12,7 +12,7 @@ import javax.persistence.Table
 
 @Entity
 @Table(name = "tb_sales")
-class Sale constructor(
+class Sale(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long,
