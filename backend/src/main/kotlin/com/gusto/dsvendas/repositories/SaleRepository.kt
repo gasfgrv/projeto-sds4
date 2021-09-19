@@ -11,14 +11,16 @@ import org.springframework.stereotype.Repository
 interface SaleRepository : JpaRepository<Sale, Long> {
 
     @Query(
-        "SELECT new com.gusto.dsvendas.dto.SaleSumDTO(obj.seller, SUM(obj.amount))" +
-                " FROM Sale AS obj GROUP BY obj.seller"
+        "SELECT new com.gusto.dsvendas.dto.SaleSumDTO(obj.seller, SUM(obj.amount)) " +
+        "FROM Sale AS obj " +
+        "GROUP BY obj.seller"
     )
     fun amountGroupedBySeller(): List<SaleSumDTO>
 
     @Query(
-        "SELECT new com.gusto.dsvendas.dto.SaleSuccessDTO(obj.seller, SUM(obj.visited), SUM(obj.deals)) "
-                + " FROM Sale AS obj GROUP BY obj.seller"
+        "SELECT new com.gusto.dsvendas.dto.SaleSuccessDTO(obj.seller, SUM(obj.visited), SUM(obj.deals)) " +
+        "FROM Sale AS obj " +
+        "GROUP BY obj.seller"
     )
     fun successGroupedBySeller(): List<SaleSuccessDTO>
 }
