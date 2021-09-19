@@ -3,7 +3,6 @@ package com.gusto.dsvendas.controllers
 import com.gusto.dsvendas.dto.SaleDTO
 import com.gusto.dsvendas.dto.SaleSuccessDTO
 import com.gusto.dsvendas.dto.SaleSumDTO
-import com.gusto.dsvendas.dto.SellerDTO
 import com.gusto.dsvendas.services.SaleService
 import io.swagger.annotations.ApiOperation
 import io.swagger.annotations.ApiResponse
@@ -30,10 +29,13 @@ class SaleController @Autowired constructor(private val saleService: SaleService
                 response = Array<SaleDTO>::class,
                 message = "Todas as vendas feitas"
             ),
-            ApiResponse(code = HttpURLConnection.HTTP_NOT_FOUND, message = ERRO_404)
+            ApiResponse(
+                code = HttpURLConnection.HTTP_NOT_FOUND,
+                message = ERRO_404
+            )
         ]
     )
-    fun findAll(page: Pageable): ResponseEntity<Page<SaleDTO?>> = ResponseEntity.ok(saleService.findAll(page))
+    fun findAll(page: Pageable): ResponseEntity<Page<SaleDTO>> = ResponseEntity.ok(saleService.findAll(page))
 
     @GetMapping("/amount-by-seller")
     @ApiOperation(value = "Total de vendas feitas por cada vendedor")
@@ -41,10 +43,13 @@ class SaleController @Autowired constructor(private val saleService: SaleService
         value = [
             ApiResponse(
                 code = HttpURLConnection.HTTP_OK,
-                response = Array<SellerDTO>::class,
+                response = Array<SaleSumDTO>::class,
                 message = "Total de vendas feitas por cada vendedor"
             ),
-            ApiResponse(code = HttpURLConnection.HTTP_NOT_FOUND, message = ERRO_404)
+            ApiResponse(
+                code = HttpURLConnection.HTTP_NOT_FOUND,
+                message = ERRO_404
+            )
         ]
     )
     fun amountGroupedBySeller(): ResponseEntity<List<SaleSumDTO>> =
@@ -56,10 +61,13 @@ class SaleController @Autowired constructor(private val saleService: SaleService
         value = [
             ApiResponse(
                 code = HttpURLConnection.HTTP_OK,
-                response = Array<SellerDTO>::class,
+                response = Array<SaleSuccessDTO>::class,
                 message = "Percentual de sucesso das vendas feitas por cada vendedor"
             ),
-            ApiResponse(code = HttpURLConnection.HTTP_NOT_FOUND, message = ERRO_404)
+            ApiResponse(
+                code = HttpURLConnection.HTTP_NOT_FOUND,
+                message = ERRO_404
+            )
         ]
     )
     fun successGroupedBySeller(): ResponseEntity<List<SaleSuccessDTO>> =

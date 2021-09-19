@@ -25,11 +25,12 @@ class SellerController @Autowired constructor(private val sellerService: SellerS
                 response = Array<SellerDTO>::class,
                 message = "Todos os vendedores cadastrados"
             ),
-            ApiResponse(code = HttpURLConnection.HTTP_NOT_FOUND, message = "Nenhum dado foi encontrado")
+            ApiResponse(
+                code = HttpURLConnection.HTTP_NOT_FOUND,
+                message = "Nenhum dado foi encontrado"
+            )
         ]
     )
-    fun findAll(): ResponseEntity<List<SellerDTO>> {
-        return ResponseEntity.ok(sellerService.findAll())
-    }
+    fun findAll(): ResponseEntity<List<SellerDTO>> = ResponseEntity.ok(sellerService.findAll())
 
 }
