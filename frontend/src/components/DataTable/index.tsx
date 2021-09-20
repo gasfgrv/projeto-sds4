@@ -29,13 +29,13 @@ const DataTable = () => {
 
     return (
         <>
-            <Pagination 
+            <Pagination
                 page={page}
-                onPageChange = {changepage}
+                onPageChange={changepage}
             />
             <div className="table-responsive">
-                <table className="table table-striped table-sm">
-                    <thead>
+                <table className="table table-hover">
+                    <thead className="text-center">
                         <tr>
                             <th>Data</th>
                             <th>Vendedor</th>
@@ -44,7 +44,7 @@ const DataTable = () => {
                             <th>Valor</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className="text-center">
                         {page.content?.map(s => (
                             <tr key={s.id}>
                                 <td>{formatLocalDate(s.date, 'dd/MM/yyyy')}</td>

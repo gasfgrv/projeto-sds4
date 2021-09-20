@@ -1,6 +1,7 @@
 package com.gusto.dsvendas.configurations
 
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.core.env.Environment
 import org.springframework.security.config.annotation.web.builders.HttpSecurity
@@ -25,8 +26,10 @@ class SecurityConfig @Autowired constructor(private val env: Environment) : WebS
         http.authorizeRequests().anyRequest().permitAll()
     }
 
+    @Bean
     fun corsConfigurationSource(): CorsConfigurationSource {
         val cors = CorsConfiguration().applyPermitDefaultValues()
+        cors.allowedOrigins = listOf("*")
         cors.allowedMethods = listOf("POST", "GET", "PUT", "DELETE", "OPTIONS")
 
         val url = UrlBasedCorsConfigurationSource()
