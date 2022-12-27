@@ -1,0 +1,861 @@
+_type: export
+__export_format: 4
+__export_date: 2022-12-27T02:30:50.333Z
+__export_source: insomnia.desktop.app:v2022.4.0
+resources:
+  - _id: errorHtmlUsingGET
+    parentId: fld_wrk_c60b45dcaca54e759fe76fe72ead047a504109a9
+    modified: 1672106057941
+    created: 1672106057941
+    url: "{{ base_url }}/error"
+    name: errorHtml
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1672106057941
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_wrk_c60b45dcaca54e759fe76fe72ead047a504109a9
+    parentId: wrk_c60b45dcaca54e759fe76fe72ead047a
+    modified: 1672106057978
+    created: 1672106057978
+    name: basic-error-controller
+    description: Basic Error Controller
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1672106057978
+    _type: request_group
+  - _id: wrk_c60b45dcaca54e759fe76fe72ead047a
+    parentId: null
+    modified: 1672106033214
+    created: 1672106033214
+    name: DSVendas backend
+    description: ""
+    scope: design
+    _type: workspace
+  - _id: errorHtmlUsingHEAD
+    parentId: fld_wrk_c60b45dcaca54e759fe76fe72ead047a504109a9
+    modified: 1672106057940
+    created: 1672106057940
+    url: "{{ base_url }}/error"
+    name: errorHtml
+    description: ""
+    method: HEAD
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1672106057940
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: errorHtmlUsingPOST
+    parentId: fld_wrk_c60b45dcaca54e759fe76fe72ead047a504109a9
+    modified: 1672106057939
+    created: 1672106057939
+    url: "{{ base_url }}/error"
+    name: errorHtml
+    description: ""
+    method: POST
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1672106057939
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: errorHtmlUsingPUT
+    parentId: fld_wrk_c60b45dcaca54e759fe76fe72ead047a504109a9
+    modified: 1672106057938
+    created: 1672106057938
+    url: "{{ base_url }}/error"
+    name: errorHtml
+    description: ""
+    method: PUT
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1672106057938
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: errorHtmlUsingDELETE
+    parentId: fld_wrk_c60b45dcaca54e759fe76fe72ead047a504109a9
+    modified: 1672106057936
+    created: 1672106057936
+    url: "{{ base_url }}/error"
+    name: errorHtml
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1672106057936
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: errorHtmlUsingOPTIONS
+    parentId: fld_wrk_c60b45dcaca54e759fe76fe72ead047a504109a9
+    modified: 1672106057935
+    created: 1672106057935
+    url: "{{ base_url }}/error"
+    name: errorHtml
+    description: ""
+    method: OPTIONS
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1672106057935
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: errorHtmlUsingPATCH
+    parentId: fld_wrk_c60b45dcaca54e759fe76fe72ead047a504109a9
+    modified: 1672106057934
+    created: 1672106057934
+    url: "{{ base_url }}/error"
+    name: errorHtml
+    description: ""
+    method: PATCH
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1672106057934
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: findAllUsingGET
+    parentId: fld_wrk_c60b45dcaca54e759fe76fe72ead047af2487dd7
+    modified: 1672106098355
+    created: 1672106057932
+    url: "{{ _.base_url }}/sales"
+    name: Listagem de vendas
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - name: offset
+        disabled: true
+        value: "0"
+        id: pair_b1ed7aa81bbe4d30a12151b27adafbef
+      - name: pageNumber
+        disabled: true
+        value: "0"
+        id: pair_d917a351b1a44c929b6817c2622df29d
+      - name: pageSize
+        disabled: true
+        value: "0"
+        id: pair_c730e27c152a434ea6f2424332bc6c81
+      - name: paged
+        disabled: true
+        value: "true"
+        id: pair_badb2fd2b84e481ca0d9e3b4183dca66
+      - name: sort.sorted
+        disabled: true
+        value: "true"
+        id: pair_aa762416dc3441ca909ca5a3dc8d529e
+      - name: sort.unsorted
+        disabled: true
+        value: "true"
+        id: pair_a1725597f72e45fcabeb9b45c3846e67
+      - name: unpaged
+        disabled: true
+        value: "true"
+        id: pair_c24f7a1669a3403eb859bd8f0b778901
+    headers: []
+    authentication: {}
+    metaSortKey: -1672106057932
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_wrk_c60b45dcaca54e759fe76fe72ead047af2487dd7
+    parentId: wrk_c60b45dcaca54e759fe76fe72ead047a
+    modified: 1672106057969
+    created: 1672106057969
+    name: sale-controller
+    description: Sale Controller
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1672106057969
+    _type: request_group
+  - _id: amountGroupedBySellerUsingGET
+    parentId: fld_wrk_c60b45dcaca54e759fe76fe72ead047af2487dd7
+    modified: 1672106057931
+    created: 1672106057931
+    url: "{{ base_url }}/sales/amount-by-seller"
+    name: Total de vendas feitas por cada vendedor
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1672106057931
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: successGroupedBySellerUsingGET
+    parentId: fld_wrk_c60b45dcaca54e759fe76fe72ead047af2487dd7
+    modified: 1672106057929
+    created: 1672106057929
+    url: "{{ base_url }}/sales/success-by-seller"
+    name: Percentual de sucesso das vendas feitas por cada vendedor
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1672106057929
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: findAllUsingGET_1
+    parentId: fld_wrk_c60b45dcaca54e759fe76fe72ead047aeada659d
+    modified: 1672106057927
+    created: 1672106057927
+    url: "{{ base_url }}/sellers"
+    name: Listagem de vendedores
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1672106057927
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_wrk_c60b45dcaca54e759fe76fe72ead047aeada659d
+    parentId: wrk_c60b45dcaca54e759fe76fe72ead047a
+    modified: 1672106057943
+    created: 1672106057943
+    name: seller-controller
+    description: Seller Controller
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1672106057944
+    _type: request_group
+  - _id: env_992b59866e301780e5668c544e98a3e0b1b622a6
+    parentId: wrk_c60b45dcaca54e759fe76fe72ead047a
+    modified: 1672106188187
+    created: 1672106033219
+    name: Base Environment
+    data:
+      base_url: "{{ scheme }}://{{ host }}"
+    dataPropertyOrder:
+      "&":
+        - base_url
+    color: null
+    isPrivate: false
+    metaSortKey: 1672106033219
+    _type: environment
+  - _id: jar_992b59866e301780e5668c544e98a3e0b1b622a6
+    parentId: wrk_c60b45dcaca54e759fe76fe72ead047a
+    modified: 1672106033221
+    created: 1672106033221
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_18162bd1a18445ebb4aff0c64fb65a52
+    parentId: wrk_c60b45dcaca54e759fe76fe72ead047a
+    modified: 1672106058096
+    created: 1672106033215
+    fileName: DSVendas backend
+    contents: >
+      swagger: '2.0'
+
+      info:
+        description: Api da semana spring react refeita em kotlin
+        version: 1.0.0
+        title: DSVendas backend
+      host: localhost:8080
+
+      basePath: /
+
+      tags:
+        - name: basic-error-controller
+          description: Basic Error Controller
+        - name: sale-controller
+          description: Sale Controller
+        - name: seller-controller
+          description: Seller Controller
+      paths:
+        /error:
+          get:
+            tags:
+              - basic-error-controller
+            summary: errorHtml
+            operationId: errorHtmlUsingGET
+            produces:
+              - text/html
+            responses:
+              '200':
+                description: OK
+                schema:
+                  $ref: '#/definitions/ModelAndView'
+              '401':
+                description: Unauthorized
+              '403':
+                description: Forbidden
+              '404':
+                description: Not Found
+            deprecated: false
+          head:
+            tags:
+              - basic-error-controller
+            summary: errorHtml
+            operationId: errorHtmlUsingHEAD
+            consumes:
+              - application/json
+            produces:
+              - text/html
+            responses:
+              '200':
+                description: OK
+                schema:
+                  $ref: '#/definitions/ModelAndView'
+              '204':
+                description: No Content
+              '401':
+                description: Unauthorized
+              '403':
+                description: Forbidden
+            deprecated: false
+          post:
+            tags:
+              - basic-error-controller
+            summary: errorHtml
+            operationId: errorHtmlUsingPOST
+            consumes:
+              - application/json
+            produces:
+              - text/html
+            responses:
+              '200':
+                description: OK
+                schema:
+                  $ref: '#/definitions/ModelAndView'
+              '201':
+                description: Created
+              '401':
+                description: Unauthorized
+              '403':
+                description: Forbidden
+              '404':
+                description: Not Found
+            deprecated: false
+          put:
+            tags:
+              - basic-error-controller
+            summary: errorHtml
+            operationId: errorHtmlUsingPUT
+            consumes:
+              - application/json
+            produces:
+              - text/html
+            responses:
+              '200':
+                description: OK
+                schema:
+                  $ref: '#/definitions/ModelAndView'
+              '201':
+                description: Created
+              '401':
+                description: Unauthorized
+              '403':
+                description: Forbidden
+              '404':
+                description: Not Found
+            deprecated: false
+          delete:
+            tags:
+              - basic-error-controller
+            summary: errorHtml
+            operationId: errorHtmlUsingDELETE
+            produces:
+              - text/html
+            responses:
+              '200':
+                description: OK
+                schema:
+                  $ref: '#/definitions/ModelAndView'
+              '204':
+                description: No Content
+              '401':
+                description: Unauthorized
+              '403':
+                description: Forbidden
+            deprecated: false
+          options:
+            tags:
+              - basic-error-controller
+            summary: errorHtml
+            operationId: errorHtmlUsingOPTIONS
+            consumes:
+              - application/json
+            produces:
+              - text/html
+            responses:
+              '200':
+                description: OK
+                schema:
+                  $ref: '#/definitions/ModelAndView'
+              '204':
+                description: No Content
+              '401':
+                description: Unauthorized
+              '403':
+                description: Forbidden
+            deprecated: false
+          patch:
+            tags:
+              - basic-error-controller
+            summary: errorHtml
+            operationId: errorHtmlUsingPATCH
+            consumes:
+              - application/json
+            produces:
+              - text/html
+            responses:
+              '200':
+                description: OK
+                schema:
+                  $ref: '#/definitions/ModelAndView'
+              '204':
+                description: No Content
+              '401':
+                description: Unauthorized
+              '403':
+                description: Forbidden
+            deprecated: false
+        /sales:
+          get:
+            tags:
+              - sale-controller
+            summary: Listagem de vendas
+            operationId: findAllUsingGET
+            produces:
+              - '*/*'
+            parameters:
+              - name: offset
+                in: query
+                required: false
+                type: integer
+                format: int64
+              - name: pageNumber
+                in: query
+                required: false
+                type: integer
+                format: int32
+              - name: pageSize
+                in: query
+                required: false
+                type: integer
+                format: int32
+              - name: paged
+                in: query
+                required: false
+                type: boolean
+              - name: sort.sorted
+                in: query
+                required: false
+                type: boolean
+              - name: sort.unsorted
+                in: query
+                required: false
+                type: boolean
+              - name: unpaged
+                in: query
+                required: false
+                type: boolean
+            responses:
+              '200':
+                description: Todas as vendas feitas
+                schema:
+                  type: array
+                  items:
+                    $ref: '#/definitions/SaleDTO'
+              '401':
+                description: Unauthorized
+              '403':
+                description: Forbidden
+              '404':
+                description: Nenhum dado foi encontrado
+            deprecated: false
+        /sales/amount-by-seller:
+          get:
+            tags:
+              - sale-controller
+            summary: Total de vendas feitas por cada vendedor
+            operationId: amountGroupedBySellerUsingGET
+            produces:
+              - '*/*'
+            responses:
+              '200':
+                description: Total de vendas feitas por cada vendedor
+                schema:
+                  type: array
+                  items:
+                    $ref: '#/definitions/SaleSumDTO'
+              '401':
+                description: Unauthorized
+              '403':
+                description: Forbidden
+              '404':
+                description: Nenhum dado foi encontrado
+            deprecated: false
+        /sales/success-by-seller:
+          get:
+            tags:
+              - sale-controller
+            summary: Percentual de sucesso das vendas feitas por cada vendedor
+            operationId: successGroupedBySellerUsingGET
+            produces:
+              - '*/*'
+            responses:
+              '200':
+                description: Percentual de sucesso das vendas feitas por cada vendedor
+                schema:
+                  type: array
+                  items:
+                    $ref: '#/definitions/SaleSuccessDTO'
+              '401':
+                description: Unauthorized
+              '403':
+                description: Forbidden
+              '404':
+                description: Nenhum dado foi encontrado
+            deprecated: false
+        /sellers:
+          get:
+            tags:
+              - seller-controller
+            summary: Listagem de vendedores
+            operationId: findAllUsingGET_1
+            produces:
+              - '*/*'
+            responses:
+              '200':
+                description: Todos os vendedores cadastrados
+                schema:
+                  type: array
+                  items:
+                    $ref: '#/definitions/SellerDTO'
+              '401':
+                description: Unauthorized
+              '403':
+                description: Forbidden
+              '404':
+                description: Nenhum dado foi encontrado
+            deprecated: false
+      definitions:
+        ModelAndView:
+          type: object
+          properties:
+            empty:
+              type: boolean
+            model:
+              type: object
+            modelMap:
+              type: object
+              additionalProperties:
+                type: object
+            reference:
+              type: boolean
+            status:
+              type: string
+              enum:
+                - 100 CONTINUE
+                - 101 SWITCHING_PROTOCOLS
+                - 102 PROCESSING
+                - 103 CHECKPOINT
+                - 200 OK
+                - 201 CREATED
+                - 202 ACCEPTED
+                - 203 NON_AUTHORITATIVE_INFORMATION
+                - 204 NO_CONTENT
+                - 205 RESET_CONTENT
+                - 206 PARTIAL_CONTENT
+                - 207 MULTI_STATUS
+                - 208 ALREADY_REPORTED
+                - 226 IM_USED
+                - 300 MULTIPLE_CHOICES
+                - 301 MOVED_PERMANENTLY
+                - 302 FOUND
+                - 302 MOVED_TEMPORARILY
+                - 303 SEE_OTHER
+                - 304 NOT_MODIFIED
+                - 305 USE_PROXY
+                - 307 TEMPORARY_REDIRECT
+                - 308 PERMANENT_REDIRECT
+                - 400 BAD_REQUEST
+                - 401 UNAUTHORIZED
+                - 402 PAYMENT_REQUIRED
+                - 403 FORBIDDEN
+                - 404 NOT_FOUND
+                - 405 METHOD_NOT_ALLOWED
+                - 406 NOT_ACCEPTABLE
+                - 407 PROXY_AUTHENTICATION_REQUIRED
+                - 408 REQUEST_TIMEOUT
+                - 409 CONFLICT
+                - 410 GONE
+                - 411 LENGTH_REQUIRED
+                - 412 PRECONDITION_FAILED
+                - 413 PAYLOAD_TOO_LARGE
+                - 413 REQUEST_ENTITY_TOO_LARGE
+                - 414 URI_TOO_LONG
+                - 414 REQUEST_URI_TOO_LONG
+                - 415 UNSUPPORTED_MEDIA_TYPE
+                - 416 REQUESTED_RANGE_NOT_SATISFIABLE
+                - 417 EXPECTATION_FAILED
+                - 418 I_AM_A_TEAPOT
+                - 419 INSUFFICIENT_SPACE_ON_RESOURCE
+                - 420 METHOD_FAILURE
+                - 421 DESTINATION_LOCKED
+                - 422 UNPROCESSABLE_ENTITY
+                - 423 LOCKED
+                - 424 FAILED_DEPENDENCY
+                - 425 TOO_EARLY
+                - 426 UPGRADE_REQUIRED
+                - 428 PRECONDITION_REQUIRED
+                - 429 TOO_MANY_REQUESTS
+                - 431 REQUEST_HEADER_FIELDS_TOO_LARGE
+                - 451 UNAVAILABLE_FOR_LEGAL_REASONS
+                - 500 INTERNAL_SERVER_ERROR
+                - 501 NOT_IMPLEMENTED
+                - 502 BAD_GATEWAY
+                - 503 SERVICE_UNAVAILABLE
+                - 504 GATEWAY_TIMEOUT
+                - 505 HTTP_VERSION_NOT_SUPPORTED
+                - 506 VARIANT_ALSO_NEGOTIATES
+                - 507 INSUFFICIENT_STORAGE
+                - 508 LOOP_DETECTED
+                - 509 BANDWIDTH_LIMIT_EXCEEDED
+                - 510 NOT_EXTENDED
+                - 511 NETWORK_AUTHENTICATION_REQUIRED
+            view:
+              $ref: '#/definitions/View'
+            viewName:
+              type: string
+          title: ModelAndView
+        Pageable:
+          type: object
+          properties:
+            offset:
+              type: integer
+              format: int64
+            pageNumber:
+              type: integer
+              format: int32
+            pageSize:
+              type: integer
+              format: int32
+            paged:
+              type: boolean
+            sort:
+              $ref: '#/definitions/Sort'
+            unpaged:
+              type: boolean
+          title: Pageable
+        Page«SaleDTO»:
+          type: object
+          properties:
+            content:
+              type: array
+              items:
+                $ref: '#/definitions/SaleDTO'
+            empty:
+              type: boolean
+            first:
+              type: boolean
+            last:
+              type: boolean
+            number:
+              type: integer
+              format: int32
+            numberOfElements:
+              type: integer
+              format: int32
+            pageable:
+              $ref: '#/definitions/Pageable'
+            size:
+              type: integer
+              format: int32
+            sort:
+              $ref: '#/definitions/Sort'
+            totalElements:
+              type: integer
+              format: int64
+            totalPages:
+              type: integer
+              format: int32
+          title: Page«SaleDTO»
+        SaleDTO:
+          type: object
+          required:
+            - amount
+            - date
+            - deals
+            - id
+            - seller
+            - visited
+          properties:
+            amount:
+              type: number
+              format: double
+            date:
+              type: string
+              format: date
+            deals:
+              type: integer
+              format: int32
+            id:
+              type: integer
+              format: int64
+            seller:
+              $ref: '#/definitions/SellerDTO'
+            visited:
+              type: integer
+              format: int32
+          title: SaleDTO
+        SaleSuccessDTO:
+          type: object
+          required:
+            - deals
+            - sellerName
+            - visited
+          properties:
+            deals:
+              type: integer
+              format: int64
+            sellerName:
+              type: string
+            visited:
+              type: integer
+              format: int64
+          title: SaleSuccessDTO
+        SaleSumDTO:
+          type: object
+          required:
+            - sellerName
+            - sum
+          properties:
+            sellerName:
+              type: string
+            sum:
+              type: number
+              format: double
+          title: SaleSumDTO
+        SellerDTO:
+          type: object
+          required:
+            - id
+            - name
+          properties:
+            id:
+              type: integer
+              format: int64
+            name:
+              type: string
+          title: SellerDTO
+        Sort:
+          type: object
+          properties:
+            empty:
+              type: boolean
+            sorted:
+              type: boolean
+            unsorted:
+              type: boolean
+          title: Sort
+        View:
+          type: object
+          properties:
+            contentType:
+              type: string
+          title: View
+    contentType: yaml
+    _type: api_spec
+  - _id: env_env_992b59866e301780e5668c544e98a3e0b1b622a6_sub
+    parentId: env_992b59866e301780e5668c544e98a3e0b1b622a6
+    modified: 1672106177550
+    created: 1672106057992
+    name: Swagger env
+    data:
+      base_path: /
+      scheme: http
+      host: localhost:8080
+    dataPropertyOrder:
+      "&":
+        - base_path
+        - scheme
+        - host
+    color: null
+    isPrivate: false
+    metaSortKey: 1672106057992
+    _type: environment
