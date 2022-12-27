@@ -17,16 +17,16 @@ repositories {
 }
 
 dependencies {
-	implementation("org.springframework.boot:spring-boot-starter-data-jpa:2.5.4")
-	implementation("org.springframework.boot:spring-boot-starter-security:2.5.4")
-	implementation("org.springframework.boot:spring-boot-starter-web:2.5.4")
-	implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.12.5")
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+	implementation("org.springframework.boot:spring-boot-starter-security")
+	implementation("org.springframework.boot:spring-boot-starter-web")
+	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	implementation("io.springfox:springfox-swagger2:2.9.2")
 	implementation("io.springfox:springfox-swagger-ui:2.9.2")
-	runtimeOnly("com.h2database:h2:1.4.200")
-	runtimeOnly("org.postgresql:postgresql:42.2.23.jre7")
+	runtimeOnly("com.h2database:h2")
+	runtimeOnly("org.postgresql:postgresql")
 	testImplementation("org.springframework.boot:spring-boot-starter-test:2.5.4")
 	testImplementation("org.springframework.security:spring-security-test:5.5.1")
 }
@@ -41,3 +41,4 @@ tasks.withType<KotlinCompile> {
 tasks.withType<Test> {
 	useJUnitPlatform()
 }
+
